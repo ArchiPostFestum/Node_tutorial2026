@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "日記";
 ---
 
 <html lang="en">
@@ -9,13 +9,13 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">ホーム</a>
         <a href="/about">概要</a>
         <a href="/blog">日記</a>
-		<h1>日記</h1>
+		<h1>{pageTitle}</h1>
 
         <p>毎日つけるとか、定期的につけるということもなく、素朴な近況報告や日々の所感をしたためる場として。</p>
         <ul>

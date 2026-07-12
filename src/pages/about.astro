@@ -1,5 +1,18 @@
 ---
+const pageTitle = "HPテスト2026の概要";
 
+const identity = {
+    Name: "遅蒔文庫",
+    country: "日本",
+    occupation: "創作者",
+    hobbies: ["読書", "イラスト", "ゲーム"]
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Astro", "illustration", "philosophy"]
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -9,18 +22,35 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">ホーム</a>
         <a href="/about">概要</a>
         <a href="/blog">日記</a>
     
-		<h1>遅蒔文庫のHPテスト2026</h1>
+		<h1>{pageTitle}</h1>
         <h2>――遅蒔文庫とは誰か？</h2>
 
         <p>Astroの入門チュートリアルリベンジ</p>
 
-        <p>2行目</p>
+        <h3>自己紹介</h3>
+        <p>{identity.Name}</p>
+        <ul>
+            <li>国籍：{identity.country}</li>
+            <li>職業：{identity.occupation}</li>
+            {identity.hobbies.length >= 2 &&
+                <li>趣味：{identity.hobbies[0]}、{identity.hobbies[1]}</li>
+            }
+        </ul>
+        <p>技能</p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+
+        {happy && <u><p>I am happy.</p></u>}
+        {finished && <u><p>＞＞＞チュートリアル完遂＜＜＜</p></u>}
+        {goal === 3 ? <u><p>3日で終わるのが目標らしい</p></u> : <u><p>3日で終わるのが目標ではないらしい</p></u>}
+
 	</body>
 </html>
