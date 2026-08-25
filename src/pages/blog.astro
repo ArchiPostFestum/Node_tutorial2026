@@ -1,5 +1,8 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
 const pageTitle = "日記";
 ---
 
@@ -18,9 +21,8 @@ const pageTitle = "日記";
         </style>
 	</head>
 	<body>
-        <a href="/">ホーム</a>
-        <a href="/about">概要</a>
-        <a href="/blog">日記</a>
+        <Header />
+
 		<h1>{pageTitle}</h1>
 
         <p>毎日つけるとか、定期的につけるということもなく、素朴な近況報告や日々の所感をしたためる場として。</p>
@@ -29,5 +31,10 @@ const pageTitle = "日記";
             <li><a href="/posts/post-2">2026-07-12　2番目の記事</a></li>
             <li><a href="/posts/post-3">2026-07-12　3番目の記事</a></li>
         </ul>
+
+        <Footer />
+        <script>
+            import "../scripts/menu.js";
+        </script>
 	</body>
 </html>

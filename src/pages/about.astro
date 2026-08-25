@@ -1,14 +1,15 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const pageTitle = "HPテスト2026の概要";
 
+const pageTitle = "HPテスト2026の概要";
 const identity = {
     Name: "遅蒔文庫",
     country: "日本",
     occupation: "創作者",
     hobbies: ["読書", "イラスト", "ゲーム"]
 };
-
 const skills = ["HTML", "CSS", "JavaScript", "Astro", "illustration", "philosophy"]
 
 const happy = true;
@@ -40,9 +41,7 @@ const textCase = "uppercase";
         </style>
 	</head>
 	<body>
-        <a href="/">ホーム</a>
-        <a href="/about">概要</a>
-        <a href="/blog">日記</a>
+        <Header />
     
 		<h1>{pageTitle}</h1>
         <h2>――遅蒔文庫とは誰か？</h2>
@@ -66,5 +65,9 @@ const textCase = "uppercase";
         {finished && <u><p>＞＞＞チュートリアル完遂＜＜＜</p></u>}
         {goal === 3 ? <u><p>3日で終わるのが目標らしい</p></u> : <u><p>3日で終わるのが目標ではないらしい</p></u>}
 
+        <Footer />
+        <script>
+            import "../scripts/menu.js";
+        </script>
 	</body>
 </html>

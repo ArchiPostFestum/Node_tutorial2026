@@ -1,5 +1,8 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
 const pageTitle = "トップページ";
 ---
 
@@ -19,10 +22,14 @@ const pageTitle = "トップページ";
 		</style>
 	</head>
 	<body>
-		<a href="/">ホーム</a>
-        <a href="/about">概要</a>
-        <a href="/blog">日記</a>
-	
+		<Header />
+
 		<h1>{pageTitle}</h1>
+
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
+
 	</body>
 </html>
