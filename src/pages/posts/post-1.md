@@ -7,7 +7,7 @@ author: '遅蒔文庫'
 image: 
     url: 'https://pbs.twimg.com/profile_images/1957781438704807938/2ptJU_AD_400x400.jpg'
     alt: '遅蒔文庫　仮人化の姿'
-tags: ["astro", "日記", "test"]
+tags: ["astro", "日記", "test", "はじまり"]
 ---
  _遅蒔文庫の日記_ へようこそ！
 
