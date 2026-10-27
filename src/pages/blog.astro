@@ -1,12 +1,18 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from '../layouts/Baselayout.astro';
 import BlogPost from '../components/Blogpost.astro';
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+
+const allPosts = await getCollection("blog");
 const pageTitle = "日記";
 ---
 <BaseLayout pageTitle={pageTitle}>
     <p>毎日つけるとか、定期的につけるということもなく、素朴な近況報告や日々の所感をしたためる場として。</p>
     <ul>
-        {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />)}
+        {
+            allPosts.map((post: any) => (
+                <BlogPost url={`/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate} />
+            ))
+        }
     </ul>
 </BaseLayout>

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: '最初の日記記事'
 pubDate: 2026-07-12
 description: '遅蒔文庫の日記　第一号'
